@@ -11,7 +11,7 @@ describe("Login to app with valid credentials", () => {
     cy.get("#loginEmail").type(mail, { delay: 200 });
     cy.get("#loginPassword").type(password);
     cy.get("button[type=submit]").contains("Login").wait(200).click();
-    cy.wait(500);
+    cy.wait(2000);
     cy.get('button[data-auth="logout"]').wait(500).click();
     cy.then(() => expect(window.localStorage.getItem("token")).to.be.null);
   });
