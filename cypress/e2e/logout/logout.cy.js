@@ -1,8 +1,8 @@
-describe("Login to app with valid credentials", () => {
+describe("Logout and clear local storage token value", () => {
   const mail = "ustest_432@stud.noroff.no";
   const password = "12345678";
 
-  it("Loads", () => {
+  it("Log in and log out", () => {
     cy.visit("/");
     cy.clearLocalStorage();
     cy.get("#registerModal").find("button.btn-close").wait(500).click();
